@@ -4,7 +4,16 @@
   margin: 0;
 }
 
-#hook-js {
+body {
+  background: url("https://www.roche.com/dam/jcr:feb5df43-9cea-494f-bc69-5044123ec177/en/biomarkers-stage-1920.jpg");
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  color: whitesmoke;
+}
+
+#hook-js,
+#hook2-js {
   font-size: 30px;
 }
 

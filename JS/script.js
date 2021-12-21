@@ -30,15 +30,16 @@ function createRandomNumbers(minimum, maximum) {
 
 // assegno il risultato della funzione ad una costante casualNumbers
 const casualNumbers = createRandomNumbers(1, 10);
-console.log(casualNumbers);
 
 // collego hookHtml con il dom tramite id "hook-js"
 
 const hookHtml = document.getElementById("hook-js");
 
+const hookHtml2 = document.getElementById("hook2-js");
+
 // Stampo 5 numeri randomici in pagina
 
-hookHtml.innerHTML = ` <div> Here are five numbers, memorize them! : </div>`;
+hookHtml.innerHTML = ` <div> Here are five numbers, memorize them : </div>`;
 hookHtml.innerHTML += ` <div> ${casualNumbers[0]} </div>`;
 hookHtml.innerHTML += ` <div> ${casualNumbers[1]} </div>`;
 hookHtml.innerHTML += ` <div> ${casualNumbers[2]} </div>`;
@@ -49,9 +50,9 @@ hookHtml.innerHTML += ` <div> ${casualNumbers[4]} </div>`;
 
 setTimeout(function () {
   hookHtml.classList.add("hide");
-}, 3000);
+}, 30000);
 
-// dichiaro un altro array vuoto
+// dichiaro un altro array vuoto per l'user
 let userArray = [];
 
 setTimeout(function () {
@@ -66,18 +67,25 @@ setTimeout(function () {
       userArray.push(userNumber);
     }
   }
-  console.log(userArray);
-}, 3100);
+}, 31000);
+
+// dichiaro un array vuoto che conterrà le risposte corrette
+let rightAnswers = [];
+
+// dichiaro un contatore che parte da 0
+let counterOK = 0;
 
 setTimeout(function () {
   for (let i = 0; i < casualNumbers.length; i++) {
-    let rightAnswers = [];
-    let counterOK = 0;
     if (userArray.includes(casualNumbers[i])) {
+      // riempio con il numero casualNumbers[i] rightAnswers
       rightAnswers.push(casualNumbers[i]);
+      // incremento il contatore
       counterOK++;
     }
-    console.log(rightAnswers);
-    console.log(counterOK);
   }
-}, 3200);
+  // stampo in HTML il contatore a fine ciclo
+  hookHtml2.innerHTML = `<div> You guessed ${counterOK} answers, these:</div>`;
+  // stampo in HTML le risposte corrette
+  hookHtml2.innerHTML += `<div> ${rightAnswers} </div>`;
+}, 32000);
