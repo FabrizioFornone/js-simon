@@ -85,7 +85,7 @@ setTimeout(function () {
       counterOK++;
     }
   }
-  hookHtml.classList.remove("hide");
+  hookHtml2.classList.remove("hide");
   // stampo in HTML il contatore a fine ciclo
   hookHtml2.innerHTML = `<div> You guessed ${counterOK} answers, these:</div>`;
   // stampo in HTML le risposte corrette
