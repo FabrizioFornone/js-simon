@@ -28,9 +28,18 @@ function createRandomNumbers(minimum, maximum) {
   return arrayRandom;
 }
 
-
+// assegno il risultato della funzione ad una costante casualNumbers
 const casualNumbers = createRandomNumbers(1, 10);
+
+// collego hookHtml con il dom tramite id "hook-js"
 
 const hookHtml = document.getElementById("hook-js");
 
-hookHtml.innerHTML = `Stampami ${casualNumbers}`;
+// Stampo 5 numeri randomici in pagina
+
+hookHtml.innerHTML = ` <div> Here are five numbers, memorize them! : </div>`;
+hookHtml.innerHTML += ` <div> ${casualNumbers[0]} </div>`;
+hookHtml.innerHTML += ` <div> ${casualNumbers[1]} </div>`;
+hookHtml.innerHTML += ` <div> ${casualNumbers[2]} </div>`;
+hookHtml.innerHTML += ` <div> ${casualNumbers[3]} </div>`;
+hookHtml.innerHTML += ` <div> ${casualNumbers[4]} </div>`;
