@@ -30,6 +30,7 @@ function createRandomNumbers(minimum, maximum) {
 
 // assegno il risultato della funzione ad una costante casualNumbers
 const casualNumbers = createRandomNumbers(1, 10);
+console.log(casualNumbers);
 
 // collego hookHtml con il dom tramite id "hook-js"
 
@@ -43,3 +44,27 @@ hookHtml.innerHTML += ` <div> ${casualNumbers[1]} </div>`;
 hookHtml.innerHTML += ` <div> ${casualNumbers[2]} </div>`;
 hookHtml.innerHTML += ` <div> ${casualNumbers[3]} </div>`;
 hookHtml.innerHTML += ` <div> ${casualNumbers[4]} </div>`;
+
+// timeout per far scomparire i numeri dopo 30 secondi
+
+setTimeout(function () {
+  hookHtml.classList.add("hide");
+}, 3000);
+
+// dichiaro un altro array vuoto
+let userArray = [];
+
+setTimeout(function () {
+  /* fai il ciclo FINCHE' l'array non diventa
+          di 4 elementi + 1 elemento extra aggiunto sotto e si chiude */
+  while (userArray.length < 5) {
+    // dichiaro cost random associata alla funzione
+    const userNumber = parseInt(prompt("Enter one of the numbers you saw"));
+    // Se l'array non include questo numero
+    if (!userArray.includes(userNumber)) {
+      // PUSHALO nell'array
+      userArray.push(userNumber);
+    }
+  }
+  console.log(userArray);
+}, 3100);
