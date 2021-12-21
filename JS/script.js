@@ -68,3 +68,16 @@ setTimeout(function () {
   }
   console.log(userArray);
 }, 3100);
+
+setTimeout(function () {
+  for (let i = 0; i < casualNumbers.length; i++) {
+    let rightAnswers = [];
+    let counterOK = 0;
+    if (userArray.includes(casualNumbers[i])) {
+      rightAnswers.push(casualNumbers[i]);
+      counterOK++;
+    }
+    console.log(rightAnswers);
+    console.log(counterOK);
+  }
+}, 3200);
