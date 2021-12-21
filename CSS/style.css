@@ -15,6 +15,7 @@ body {
 #hook-js,
 #hook2-js {
   font-size: 30px;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .hide {

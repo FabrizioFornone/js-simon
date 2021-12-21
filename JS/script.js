@@ -39,7 +39,8 @@ const hookHtml2 = document.getElementById("hook2-js");
 
 // Stampo 5 numeri randomici in pagina
 
-hookHtml.innerHTML = ` <div> Here are five numbers, memorize them, you have 30 seconds: </div>`;
+hookHtml.innerHTML = ` <div> Here are five numbers, memorize them, </div>`;
+hookHtml.innerHTML += ` <div> you have 30 seconds: </div>`;
 hookHtml.innerHTML += ` <div> ${casualNumbers[0]} </div>`;
 hookHtml.innerHTML += ` <div> ${casualNumbers[1]} </div>`;
 hookHtml.innerHTML += ` <div> ${casualNumbers[2]} </div>`;
@@ -84,6 +85,7 @@ setTimeout(function () {
       counterOK++;
     }
   }
+  hookHtml.classList.remove("hide");
   // stampo in HTML il contatore a fine ciclo
   hookHtml2.innerHTML = `<div> You guessed ${counterOK} answers, these:</div>`;
   // stampo in HTML le risposte corrette
