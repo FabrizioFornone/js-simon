@@ -50,6 +50,7 @@ hookHtml.innerHTML += ` <div> ${casualNumbers[4]} </div>`;
 // timeout per far scomparire i numeri dopo 30 secondi
 
 setTimeout(function () {
+  // aggiungo la classe hide da hookHtml
   hookHtml.classList.add("hide");
 }, 30000);
 
@@ -85,6 +86,7 @@ setTimeout(function () {
       counterOK++;
     }
   }
+  // rimuovo la classe hide da hookHtml2
   hookHtml2.classList.remove("hide");
   // stampo in HTML il contatore a fine ciclo
   hookHtml2.innerHTML = `<div> You guessed ${counterOK} answers, these:</div>`;
